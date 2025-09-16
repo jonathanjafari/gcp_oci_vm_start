@@ -2,11 +2,14 @@
 
 ## Video
 
-### Oracle Cloud (OCI)
-🔗 Loom: [OCI VM Lifecycle Demo](https://www.loom.com/share/2c348540d16b47fea0777c70d371a909?sid=c9d4c7ba-fcab-4d1e-baa2-ae441d16910c)
-
 ### Google Cloud Platform (GCP)
 🔗 Loom: [GCP VM Lifecycle Demo](https://www.loom.com/share/1cdce78a3db04af3b748824900dff973?sid=6e16946d-c755-4bff-a7ee-f09e8274ff0b)
+
+### Oracle Cloud Infrastructure (OCI)
+🔗 Loom: [OCI VM Lifecycle Demo](https://www.loom.com/share/2c348540d16b47fea0777c70d371a909?sid=c9d4c7ba-fcab-4d1e-baa2-ae441d16910c)
+
+### Reflection
+🔗 Loom: [GCP vs OCI Comparison & Preference](https://www.loom.com/share/a09fc11942dd47da95853bee33aa8fa4?sid=fe46456f-92a5-460f-9fd8-fe851dc94433)
 
 ## Prereqs
 * Access to Google Cloud Platform (GCP) and Oracle Cloud Infrastructure (OCI)
@@ -56,7 +59,7 @@
 
 ![GCP Cleaned Instance](./screenshots/gcp_cleaned2.png)
 
-## Oracle Cloud (OCI)
+## Oracle Cloud Infrastructure (OCI)
 
 ### Create
 * Console → *Compute → Instances → Create instance*
@@ -107,6 +110,18 @@
 
 #### Cleaned Networking
 ![OCI Networking Instance](./screenshots/oci_cleanednetworking.png)
+
+### Pitfalls
+
+**GCP**
+- Make sure billing is enabled for your project, or VM creation will fail.  
+- Ephemeral IPs disappear automatically, but static IPs must be manually released.  
+- Deleting a VM deletes the boot disk by default, but always double-check *Disks* to avoid hidden charges.  
+
+**OCI**
+- Always check *Delete boot volume* when terminating a VM, or the volume will continue incurring costs.  
+- Reserved public IPs are not released automatically — confirm under **Networking → IP Management**.  
+- Terminated instances stay visible in the console (historical record), so don’t confuse them with running resources.  
 
 ## Reflections
 
