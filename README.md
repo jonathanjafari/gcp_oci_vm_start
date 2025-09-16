@@ -2,10 +2,10 @@
 
 ## Video
 
-### OCI
+### Oracle Cloud (OCI)
 🔗 Loom: [OCI VM Lifecycle Demo](https://www.loom.com/share/2c348540d16b47fea0777c70d371a909?sid=c9d4c7ba-fcab-4d1e-baa2-ae441d16910c)
 
-### GCP
+### Google Cloud Platform (GCP)
 🔗 Loom: [GCP VM Lifecycle Demo](https://www.loom.com/share/1cdce78a3db04af3b748824900dff973?sid=6e16946d-c755-4bff-a7ee-f09e8274ff0b)
 
 ## Prereqs
@@ -61,9 +61,9 @@
 ### Create
 * Console → *Compute → Instances → Create instance*
 * **Compartment:** `jonathanjafari`
-* **Availability domain:** AD-3 (example used in demo)
+* **Availability domain:** AD-3
 * **Shape:** `VM.Standard.E2.1.Micro` (Always Free eligible, 1 OCPU, 1 GB RAM)
-* **Image:** Canonical Ubuntu 20.04 Minimal (or Oracle Linux if Ubuntu unavailable)
+* **Image:** Canonical Ubuntu 20.04 Minimal
 * **Networking:** existing VCN (*test-cloud*) with internet connectivity; existing subnet
 * **Public IP:** ephemeral
 * **Boot volume:** default minimal
